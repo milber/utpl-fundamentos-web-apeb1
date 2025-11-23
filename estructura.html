@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Inicio - Buenas prácticas de maquetación en HTML5</title>
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- CABECERA -->
+    <header class="bg-white shadow-sm py-3 mb-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+            <h1 class="fw-bold text-dark fs-3 m-0">
+                Buenas prácticas de Maquetación en HTML5
+            </h1>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Fundamento WEB - UTPL</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="bg-white border-bottom shadow-sm mb-3">
+        <div class="container">
+            <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
+                <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container mb-5">
+
+        <section class="page-section my-4">
+
+            <h2 class="h4 fw-bold text-secondary mb-3">
+                Esta sección se centra en los elementos fundamentales que aseguran 
+                la correcta interpretación y visualización del documento HTML por parte del navegador.
+            </h2>
+
+            <!-- ✅ Tabla corregida: 70% / 30% fijo -->
+            <div class="custom-table-responsive">
+                <table class="table table-bordered align-middle fixed-table">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Buena Prácticas</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Declara el DOCTYPE</strong></td>
+                            <td>
+                                Es crucial para indicar al navegador qué versión de HTML se está utilizando,
+                                garantizando la compatibilidad con los estándares modernos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cierra Tus Etiquetas</strong></td>
+                            <td>
+                                Asegura que la estructura del documento sea correcta, ya que cada etiqueta abierta
+                                debe tener su correspondiente cierre, respetando el orden.
+                                Esto previene errores de renderización.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Especifica la Codificación de Caracteres</strong></td>
+                            <td>
+                                Se debe incluir la meta etiqueta para la codificación, preferiblemente UTF-8,
+                                para garantizar que todos los caracteres, especialmente los especiales (como la "ñ"),
+                                se muestren correctamente.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE -->
+    <footer class="py-4">
+        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
+            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
+        </div>
+    </footer>
+
+</body>
+</html>
