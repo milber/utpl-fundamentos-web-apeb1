@@ -30,8 +30,8 @@
             <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="estructura.html">Estuctura y validación</a></li>
-                <li class="nav-item"><a class="nav-link active" href="estilo.html">Estilo y código limpio</a></li>
-                <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
             </ul>
         </div>
@@ -43,8 +43,8 @@
         <section class="page-section my-4">
 
             <h2 class="h4 fw-bold text-secondary mb-3">
-                Estas prácticas están dirigidas a mejorar la legibilidad del código fuente,
-                haciéndolo más consistente, fácil de leer y de mantener por otros desarrolladores.
+                Este grupo de prácticas optimiza el significado del contenido (semántica),
+                lo hace accesible para todos los usuarios y promueve un diseño escalable al separar el contenido del estilo.
             </h2>
 
             <!-- ✅ Tabla corregida: 70% / 30% fijo -->
@@ -58,24 +58,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Utiliza Etiquetas en Minúsculas</strong></td>
+                            <td><strong>Evita el Uso Excesivo de Etiquetas <strng>div</strng></strong></td>
                             <td>
-                                Aunque HTML no es sensible a mayúsculas, usar minúsculas para etiquetas,
-                                atributos y valores es la mejor práctica y mejora significativamente la legibilidad.
+                                Utiliza las etiquetas estructurales de HTML5 como &lt;header&gt;,
+                                &lt;footer&gt;, &lt;article&gt; o &lt;section&gt; para dar un significado
+                                más preciso a las partes de tu documento (código más semántico).
                             </td>
                         </tr>
                         <tr>
-                            <td><strong>Mantén una Indentación Consistente</strong></td>
+                            <td><strong>Familiarízate con las Etiquetas de HTML</strong></td>
                             <td>
-                                La indentación ayuda a visualizar la estructura del documento de forma clara,
-                                facilitando la identificación de bloques y la corrección de errores.
+                                Conocer el repertorio de etiquetas disponibles permite elegir el elemento
+                                más adecuado para cada contenido y evita recurrir al genérico &lt;div&gt; innecesariamente.
                             </td>
                         </tr>
                         <tr>
-                            <td><strong>Usa los Atributos Booleanos Correctamente</strong></td>
+                            <td><strong>Incluye Siempre Atributos ALT</strong></td>
                             <td>
-                                Para atributos como disabled, checked o selected, basta con la presencia del atributo
-                                en la etiqueta. No es necesario ni recomendable añadirles un valor
+                                El atributo alt en las imágenes es vital para la accesibilidad (lectores de pantalla) y
+                                también proporciona contexto adicional para los motores de búsqueda (SEO). Debe ser descriptivo.
                             </td>
                         </tr>
                     </tbody>
