@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Inicio - Buenas prácticas de maquetación en HTML5</title>
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- CABECERA -->
+    <header class="bg-white shadow-sm py-3 mb-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+            <h1 class="fw-bold text-dark fs-3 m-0">
+                Buenas prácticas de Maquetación en HTML5
+            </h1>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Fundamento WEB - UTPL</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="bg-white border-bottom shadow-sm mb-3">
+        <div class="container">
+            <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link active" href="estilo.html">Estilo y código limpio</a></li>
+                <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container mb-5">
+
+        <section class="page-section my-4">
+
+            <h2 class="h4 fw-bold text-secondary mb-3">
+                Estas prácticas están dirigidas a mejorar la legibilidad del código fuente,
+                haciéndolo más consistente, fácil de leer y de mantener por otros desarrolladores.
+            </h2>
+
+            <!-- ✅ Tabla corregida: 70% / 30% fijo -->
+            <div class="custom-table-responsive">
+                <table class="table table-bordered align-middle fixed-table">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Buena Prácticas</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Utiliza Etiquetas en Minúsculas</strong></td>
+                            <td>
+                                Aunque HTML no es sensible a mayúsculas, usar minúsculas para etiquetas,
+                                atributos y valores es la mejor práctica y mejora significativamente la legibilidad.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mantén una Indentación Consistente</strong></td>
+                            <td>
+                                La indentación ayuda a visualizar la estructura del documento de forma clara,
+                                facilitando la identificación de bloques y la corrección de errores.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Usa los Atributos Booleanos Correctamente</strong></td>
+                            <td>
+                                Para atributos como disabled, checked o selected, basta con la presencia del atributo
+                                en la etiqueta. No es necesario ni recomendable añadirles un valor
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE -->
+    <footer class="py-4">
+        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
+            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
+        </div>
+    </footer>
+
+</body>
+</html>
