@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Inicio - Buenas prácticas de maquetación en HTML5</title>
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+    <!-- CABECERA -->
+    <header class="bg-white shadow-sm py-3 mb-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+            <h1 class="fw-bold text-dark fs-3 m-0">
+                Buenas prácticas de Maquetación en HTML5
+            </h1>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Fundamento WEB - UTPL</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="bg-white border-bottom shadow-sm mb-3">
+        <div class="container">
+            <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="semantica.html">Buenas Prácticas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contenido.html">Contenido y Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="datos.html">Datos y Listas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+x
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container mb-5">
+
+        <section class="bg-white p-4 rounded shadow">
+            <div class="row g-4 align-items-start">
+                <!-- COLUMNA 1 -->
+                <div class="col-md-4 text-center">
+                    <figure class="rounded overflow-hidden shadow-sm">
+                        <img src="images/html5-black.png" class="img-fluid" alt="html5 logo negro">
+                    </figure>
+                </div>
+                <!-- COLUMNA 2 -->
+                <div class="col-md-8">
+                    <h2 class="fw-bold fs-3 mb-4 d-none d-md-block">Definición</h2>
+
+                    <p class="fs-5 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut viverra ipsum sed pellentesque iaculis.
+                        Cras pretium non erat ornare semper.
+                    </p>
+
+                    <h3 class="fs-4 fw-semibold text-primary mt-4 mb-3">Temas</h3>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut viverra ipsum sed pellentesque iaculis.
+                        Cras pretium non erat ornare semper.
+                    </p>
+
+                    <div class="alert alert-primary mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut viverra ipsum sed pellentesque iaculis.
+                        Cras pretium non erat ornare semper.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+        <div class="container bg-dark text-light text-center small py-4 rounded">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
+            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-info text-decoration-none">machamputiz1@utpl.edu.ec</a>
+        </div>
+    </footer>
+
+</body>
+</html>
