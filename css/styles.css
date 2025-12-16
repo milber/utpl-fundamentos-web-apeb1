@@ -385,7 +385,7 @@ textarea.form-control {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-/* 🔑 CLASE: .btn-primary (Color del botón) */
+/* CLASE: .btn-primary (Color del botón) */
 .btn-primary {
     color: #fff;
     background-color: var(--primary); /* usa #007bff */
@@ -403,4 +403,96 @@ textarea.form-control {
 .mx-auto {
     margin-right: auto !important;
     margin-left: auto !important;
+}
+
+/* --- Contenedor de la Fila (row) --- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px; /* Compensa el padding de las columnas */
+    margin-left: -15px;
+}
+
+/* Espacio entre columnas (g-4) */
+.g-4 {
+    /* Representa el gutter (espacio) entre columnas. 1.5rem */
+    --bs-gutter-x: 1.5rem; 
+    --bs-gutter-y: 1.5rem;
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    margin-top: calc(var(--bs-gutter-y) * -1);
+}
+.g-4 > * {
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+}
+
+/* Alineación vertical de ítems en la fila (align-items-start) */
+.align-items-start {
+    align-items: flex-start !important;
+}
+
+/* --- Clases Base de Columna (col-md-*) --- */
+[class^="col"], [class*=" col"] {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Comportamiento de las columnas en dispositivos medianos (md) */
+@media (min-width: 768px) {
+    /* Reset en desktop (las columnas flotan) */
+    .col-md-4, .col-md-8 {
+        flex: 0 0 100%; /* Resetea el flex por si se usó en móvil */
+        max-width: 100%;
+    }
+
+    /* Columna 4 de 12 (33.33%) */
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    /* Columna 8 de 12 (66.66%) */
+    .col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Utilitarios de Listas --- */
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* --- Utilitarios de Texto y Layout --- */
+.text-center {
+    text-align: center !important; /* Usado en la columna de la imagen */
+}
+.shadow {
+    /* Sombra media para la sección */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* Para los elementos de la lista: */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+.p-2 { 
+    padding: .5rem !important; 
+}
+.mb-2 { 
+    margin-bottom: .5rem !important; 
+}
+.me-2 { 
+    margin-right: .5rem !important; 
 }
