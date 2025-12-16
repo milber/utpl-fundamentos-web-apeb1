@@ -1,40 +1,75 @@
+/*
+================================================================================
+A. VARIABLES Y CONFIGURACIÓN BASE
+================================================================================
+*/
 
 :root {
+    /* -- COLORES BOOTSTRAP UTILIZADOS -- */
     --white: #fff;
-    --gray: #6c757d;
-    --dark: #343a40;
-    --primary: #007bff;
+    --gray: #6c757d;    /* Usado por .text-muted y .text-secondary */
+    --dark: #343a40;    /* Usado por .text-dark */
+    --primary: #007bff; /* Color principal de Bootstrap (azules) */
     
-    /* Breakpoint para dispositivos medianos (md) */
-    --breakpoint-md: 768px;
+    /* -- COLORES PROPIOS -- */
+    --color-primary: #3b82f6; /* Color primario propio (usado en .nav-link.active) */
+
+    /* -- TIPOGRAFÍA Y BREAKPOINTS -- */
+    --breakpoint-md: 768px; /* Punto de quiebre para flex-md-row, etc. */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* Reset de Box Model */
+/* Reset de Box Model (Esencial para que paddings y bordes no afecten el ancho) */
 *, ::after, ::before {
     box-sizing: border-box;
 }
+/* Reset base para HTML (Ayuda con la línea de base del texto) */
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
 
 
+/*
+================================================================================
+B. ESTILOS GLOBALES Y TIPOGRAFÍA (Tags HTML)
+================================================================================
+*/
 
+/* --- BODY (Fondo, fuente base y color de texto) --- */
 body {
+    /* Estilos propios (Inter y fondo de página) */
     font-family: 'Inter', sans-serif;
     background-color: #f3f4f6;
+    
+    /* Resets de Bootstrap para utilidades */
     font-family: var(--font-family-sans-serif);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
 }
 
-/* Encabezados */
+/* --- ENCABEZADOS Y PÁRRAFOS --- */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
+    font-family: inherit; /* Necesario para que h4, h2, etc. hereden el font-family */
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
 }
 h1 {
     font-size: 2.5rem;
+}
+/* Tamaños de fuente específicos (usados en tablas) */
+.h2, h2 {
+    font-size: 2rem;
+}
+.h4, h4 {
+    font-size: 1.5rem;
 }
 
 p {
@@ -42,20 +77,26 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Enlaces */
+/* --- ENLACES --- */
 a {
-    color: #007bff;
+    color: var(--primary); /* usa #007bff */
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 a:hover {
-    color: #0056b3;
+    color: #0056b3; /* azul más oscuro */
     text-decoration: underline;
 }
 
 
+/*
+================================================================================
+C. LAYOUT Y GRIDS (Estructura: Container, Flexbox, Responsive)
+================================================================================
+*/
 
+/* --- CONTENEDOR PRINCIPAL --- */
 .container {
     width: 100%;
     padding-right: 15px;
@@ -63,102 +104,154 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
 }
-
-@media (min-width: 576px) {
-    .container { max-width: 540px; }
-}
-@media (min-width: 768px) {
-    .container { max-width: 720px; }
-}
-@media (min-width: 992px) {
-    .container { max-width: 960px; }
-}
-@media (min-width: 1200px) {
-    .container { max-width: 1140px; }
-}
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
 
 
-.bg-white {
-    background-color: var(--white) !important;
+/* --- FLEXBOX (Para la Cabecera y Navegación) --- */
+.d-flex {
+    display: flex !important;
 }
-
-.shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+.flex-column {
+    flex-direction: column !important; /* Cabecera en móvil */
 }
-
-.rounded {
-    border-radius: .25rem !important;
+.justify-content-between {
+    justify-content: space-between !important;
 }
-
-/* --- Padding (py-*) --- */
-
-.py-3 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+.flex-nowrap {
+    flex-wrap: nowrap !important; /* Navegación en una sola línea */
 }
-.py-4 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+.align-items-start {
+    align-items: flex-start !important; /* Usado en listas de index.html */
+}
+.me-2 {
+    margin-right: .5rem !important;
 }
 
-/* --- Margin (mb-*) --- */
-
-.mb-1 {
-    /* Margen inferior pequeño de 0.25rem (4px) (Clase del pie) */
-    margin-bottom: .25rem !important;
-}
-.mb-3 {
-    /* Margin bottom de 1rem (16px) (Clase de la cabecera) */
-    margin-bottom: 1rem !important;
-}
-
-
-
-.text-secondary {
-    color: var(--gray) !important; 
-}
-
-.text-primary {
-    color: var(--primary) !important;
-}
-
-.text-center {
-    text-align: center !important;
-}
-
-.small {
-    font-size: 80% !important;
-    font-weight: 400;
-}
-
-.text-decoration-none {
-    text-decoration: none !important;
+/* Responsive Flexbox (a partir de 768px) */
+@media (min-width: var(--breakpoint-md)) {
+    .flex-md-row {
+        flex-direction: row !important; /* Cabecera en desktop */
+    }
+    .align-items-md-center {
+        align-items: center !important;
+    }
+    .mt-md-0 {
+        margin-top: 0 !important; /* Elimina margen top en desktop */
+    }
 }
 
 
 /*
-COMPONENTES Y ESTILOS ESPECÍFICOS DEL PROYECTO
 ================================================================================
+D. UTILIDADES (SPACING, COLOR, SHADOWS)
+================================================================================
+*/
 
-/* --- NAVEGACIÓN (NAV) --- */
+/* --- SPACING (Margin) --- */
+.m-0 { margin: 0 !important; }
+.mb-1 { margin-bottom: .25rem !important; } /* Pie de página */
+.mb-2 { margin-bottom: .5rem !important; } /* Usado en listas de index.html */
+.mb-3, .my-3 { margin-bottom: 1rem !important; }  /* Cabecera, Navegación */
+.mt-2 { margin-top: .5rem !important; } /* Cabecera en móvil */
 
+/* --- SPACING (Padding) --- */
+.p-2 { padding: .5rem !important; } /* Usado en listas de index.html */
+.py-2 {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important; /* Navegación */
+}
+.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important; /* Cabecera */
+}
+.py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important; /* Pie de página */
+}
+
+/* --- FONDOS Y BORDES --- */
+.bg-white {
+    background-color: var(--white) !important;
+}
+.bg-light {
+    background-color: #f8f9fa !important; /* Usado en listas de index.html */
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; /* Cabecera y Navegación */
+}
+.rounded {
+    border-radius: .25rem !important;
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important; /* Borde inferior de la <nav> */
+}
+.overflow-auto {
+    overflow: auto !important; /* Navegación */
+}
+
+
+/* --- TEXTO Y TIPOGRAFÍA --- */
+.fw-bold { font-weight: 700 !important; }
+.fw-semibold { font-weight: 600 !important; }
+
+.fs-3 { font-size: 1.75rem !important; } /* Título H1 en cabecera */
+.fs-5 { font-size: 1.25rem !important; } /* Usado en listas de index.html */
+
+.text-dark { color: var(--dark) !important; }
+.text-muted { color: var(--gray) !important; }
+.text-secondary { color: var(--gray) !important; } /* Pie de página */
+.text-primary { color: var(--primary) !important; } /* Enlaces */
+
+.small { font-size: 80% !important; font-weight: 400; }
+.text-center { text-align: center !important; }
+.text-decoration-none { text-decoration: none !important; }
+
+
+/*
+================================================================================
+E. COMPONENTES: NAVEGACIÓN (Mix de Bootstrap y Personalizado)
+================================================================================
+*/
+
+/* --- Estructura base de Bootstrap para Nav --- */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-pills .nav-link {
+    border-radius: .25rem; /* Forma de píldora */
+}
+.nav-link {
+    display: block; /* Estructura del enlace */
+    padding: .5rem 1rem;
+}
+.nav-link:focus, .nav-link:hover {
+    text-decoration: none;
+}
+
+/* --- Estilos personalizados del usuario --- */
 .nav-item a.nav-link {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Sobreescribe el padding de .nav-link */
     transition: all 0.25s ease;
     white-space: nowrap;
 }
-
 .nav-item .nav-link.active {
     font-weight: 600;
-    border-bottom: 3px solid var(--color-primary); 
+    border-bottom: 3px solid var(--color-primary);
     color: var(--color-primary) !important;
     background-color: transparent !important;
 }
-
 .nav-item .nav-link:hover {
     color: #2563eb !important;
 }
 
+/* --- Contenedor de la navegación (Sticky) --- */
 .nav-container,
 nav.bg-white {
     background-color: #ffffff;
@@ -169,6 +262,14 @@ nav.bg-white {
     z-index: 10;
 }
 
+
+/*
+================================================================================
+F. COMPONENTES: SECCIONES Y TABLAS
+================================================================================
+*/
+
+/* --- SECCIONES DE CONTENIDO (.page-section) --- */
 .page-section {
     background-color: #ffffff;
     padding: 2rem;
@@ -178,60 +279,24 @@ nav.bg-white {
         0 4px 6px -2px rgba(0,0,0,0.05);
 }
 
-
-/* Navelación */
-.nav {
-    display: flex; 
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-nav-pills .nav-link {
-    border-radius: .25rem;
-}
-
-.nav-link {
-    display: block;
-    padding: .5rem 1rem;
-}
-.nav-link:focus, .nav-link:hover {
-    text-decoration: none;
-}
-
-.border-bottom {
-    border-bottom: 1px solid #dee2e6 !important; /* Borde inferior de la <nav> */
-}
-.overflow-auto {
-    overflow: auto !important; /* Permite el scroll interno en caso de desbordamiento */
-}
-.flex-nowrap {
-    flex-wrap: nowrap !important; /* Fuerza a los elementos a estar en una sola línea */
-}
-
-/* TABLAS  */
-
+/* --- TABLAS (Estilos Fijos) --- */
 .custom-table-responsive {
     overflow-x: hidden !important;
 }
-
 table.fixed-table {
     table-layout: fixed !important;
     width: 100% !important;
-    min-width: 0 !important; 
+    min-width: 0 !important;
     max-width: 100% !important;
 }
 
-/* PRIMERA COLUMNA: */
+/* Columnas fijas 30/70 */
 table.fixed-table thead tr th:first-child,
 table.fixed-table tbody tr td:first-child {
     width: 30% !important;
     min-width: 30% !important;
     max-width: 30% !important;
 }
-
-/* SEGUNDA COLUMNA */
 table.fixed-table thead tr th:last-child,
 table.fixed-table tbody tr td:last-child {
     width: 70% !important;
@@ -239,7 +304,7 @@ table.fixed-table tbody tr td:last-child {
     max-width: 70% !important;
 }
 
-/* Comportamiento de texto y padding */
+/* Comportamiento de celda */
 table.fixed-table th,
 table.fixed-table td {
     word-break: break-word !important;
