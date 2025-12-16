@@ -178,6 +178,38 @@ nav.bg-white {
         0 4px 6px -2px rgba(0,0,0,0.05);
 }
 
+
+/* Navelación */
+.nav {
+    display: flex; 
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+nav-pills .nav-link {
+    border-radius: .25rem;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+.nav-link:focus, .nav-link:hover {
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important; /* Borde inferior de la <nav> */
+}
+.overflow-auto {
+    overflow: auto !important; /* Permite el scroll interno en caso de desbordamiento */
+}
+.flex-nowrap {
+    flex-wrap: nowrap !important; /* Fuerza a los elementos a estar en una sola línea */
+}
+
 /* TABLAS  */
 
 .custom-table-responsive {
