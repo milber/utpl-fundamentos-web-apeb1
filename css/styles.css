@@ -130,6 +130,14 @@ C. LAYOUT Y GRIDS (Estructura: Container, Flexbox, Responsive)
     margin-right: .5rem !important;
 }
 
+.d-grid {
+    display: grid !important;
+}
+
+fs-4 {
+    font-size: 1.5rem !important; /* Para el título H2 */
+}
+
 /* Responsive Flexbox (a partir de 768px) */
 @media (min-width: var(--breakpoint-md)) {
     .flex-md-row {
@@ -322,4 +330,77 @@ table.fixed-table td {
 .table-primary th, 
 .table-primary td {
     background-color: #b8daff !important;
+}
+
+/* ================================================================================
+G. COMPONENTES: FORMULARIO
+================================================================================
+*/
+
+/* CLASE: .form-label (Etiqueta del campo) */
+.form-label {
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+
+/* CLASE: .form-control (Input, Select, Textarea) */
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px); /* Altura estándar */
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25); /* Efecto de foco azul */
+}
+textarea.form-control {
+    height: auto; /* Permite que el textarea crezca con las filas */
+}
+
+/* 🔑 CLASE: .btn (Base del botón) */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* 🔑 CLASE: .btn-primary (Color del botón) */
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary); /* usa #007bff */
+    border-color: var(--primary);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5);
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
