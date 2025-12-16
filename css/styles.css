@@ -1,3 +1,9 @@
+/* ================================================================================
+   IMPORTACIÓN DE FUENTES DE GOOGLE
+   ================================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
 /*
 ================================================================================
 A. VARIABLES Y CONFIGURACIÓN BASE
@@ -63,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-size: 2.5rem;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 /* Tamaños de fuente específicos (usados en tablas) */
 .h2, h2 {
