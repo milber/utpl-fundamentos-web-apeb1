@@ -11,18 +11,27 @@ A. VARIABLES Y CONFIGURACIÓN BASE
 */
 
 :root {
-    /* -- COLORES BOOTSTRAP UTILIZADOS -- */
-    --white: #fff;
-    --gray: #6c757d;    /* Usado por .text-muted y .text-secondary */
-    --dark: #343a40;    /* Usado por .text-dark */
-    --primary: #007bff; /* Color principal de Bootstrap (azules) */
+    /* --- Colores BASE (Modo CLARO) --- */
+    --body-bg: #f3f4f6;
+    --main-bg: #ffffff;
+    --text-color: #212529;
+    --muted-color: #6c757d;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.05);
     
-    /* -- COLORES PROPIOS -- */
-    --color-primary: #3b82f6; /* Color primario propio (usado en .nav-link.active) */
+    /* ... el resto de sus variables como --primary, --color-primary ... */
+    --primary: #007bff;
+    --gray: #6c757d;
+}
 
-    /* -- TIPOGRAFÍA Y BREAKPOINTS -- */
-    --breakpoint-md: 768px; /* Punto de quiebre para flex-md-row, etc. */
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+/* 🔑 Variables para el MODO OSCURO */
+.dark-mode {
+    --body-bg: #1f2937; /* Fondo de la página: Gris oscuro */
+    --main-bg: #374151; /* Fondo de secciones y cabecera: Gris medio */
+    --text-color: #e5e7eb; /* Texto claro */
+    --muted-color: #9ca3af; /* Texto atenuado más claro */
+    --border-color: #4b5563; /* Borde más oscuro */
+    --shadow-color: rgba(255, 255, 255, 0.1); /* Sombra clara */
 }
 
 /* Reset de Box Model (Esencial para que paddings y bordes no afecten el ancho) */
@@ -45,6 +54,9 @@ B. ESTILOS GLOBALES Y TIPOGRAFÍA (Tags HTML)
 
 /* --- BODY (Fondo, fuente base y color de texto) --- */
 body {
+    background-color: var(--body-bg);
+    color: var(--text-color);
+
     /* Estilos propios (Inter y fondo de página) */
     font-family: 'Inter', sans-serif;
     background-color: #f3f4f6;
@@ -86,6 +98,7 @@ p {
 
 /* --- ENLACES --- */
 a {
+    color: var(--primary);
     color: var(--primary); /* usa #007bff */
     text-decoration: none;
     background-color: transparent;
@@ -195,7 +208,7 @@ D. UTILIDADES (SPACING, COLOR, SHADOWS)
     background-color: #f8f9fa !important; /* Usado en listas de index.html */
 }
 .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; /* Cabecera y Navegación */
+    box-shadow: 0 .125rem .25rem var(--shadow-color) !important;
 }
 .rounded {
     border-radius: .25rem !important;
@@ -216,8 +229,11 @@ D. UTILIDADES (SPACING, COLOR, SHADOWS)
 .fs-5 { font-size: 1.25rem !important; } /* Usado en listas de index.html */
 
 .text-dark { color: var(--dark) !important; }
-.text-muted { color: var(--gray) !important; }
-.text-secondary { color: var(--gray) !important; } /* Pie de página */
+
+.text-muted, .text-secondary {
+    color: var(--muted-color) !important;
+}
+
 .text-primary { color: var(--primary) !important; } /* Enlaces */
 
 .small { font-size: 80% !important; font-weight: 400; }
@@ -502,4 +518,13 @@ textarea.form-control {
 }
 .me-2 { 
     margin-right: .5rem !important; 
+}
+
+.bg-white, .page-section, nav.bg-white {
+    background-color: var(--main-bg) !important;
+    color: var(--text-color);
+}
+
+.border-bottom {
+    border-bottom-color: var(--border-color) !important;
 }
