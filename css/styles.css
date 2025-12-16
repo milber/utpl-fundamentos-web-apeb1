@@ -1,6 +1,40 @@
 :root {
-    --color-primary: #3b82f6;
+    --white: #fff;
+    --gray: #6c757d;    /* Usado por .text-muted */
+    --dark: #343a40;    /* Usado por .text-dark */
+    --primary: #007bff; /* Color principal */
+    
+    /* Breakpoint para dispositivos medianos (md) */
+    --breakpoint-md: 768px;
 }
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+/* Clases de la cabecera: bg-white, shadow-sm, py-3, mb-3 */
+
+.bg-white {
+    background-color: var(--white) !important;
+}
+
+.shadow-sm {
+    /* Sombra pequeña para dar un efecto de elevación sutil */
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.py-3 {
+    /* Padding vertical (top y bottom) de 1rem (16px) */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.mb-3 {
+    /* Margin bottom (margen inferior) de 1rem (16px) */
+    margin-bottom: 1rem !important;
+}
+Próximo Pas
 
 /* Fuente y fondo general */
 body {
