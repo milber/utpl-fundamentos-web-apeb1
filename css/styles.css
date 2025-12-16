@@ -313,3 +313,13 @@ table.fixed-table td {
     vertical-align: top !important;
     padding: 0.75rem !important;
 }
+
+/* CLASE: .table-primary */
+.table-primary {
+    background-color: #b8daff !important;
+}
+
+.table-primary th, 
+.table-primary td {
+    background-color: #b8daff !important;
+}
