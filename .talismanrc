@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: js/script.js
+  checksum: 6e0e9beb84690d4cfc08002457669b43158deb2344559d2549a91a1b6a3dddfa
+version: "1.0"
