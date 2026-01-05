@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: css/bootstrap.min.css
+  checksum: 7752857469e5e362f1a197a14a30ae1f02522888c4083056bdac7469360d96f9
+version: "1.0"
