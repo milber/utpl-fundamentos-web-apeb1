@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas Prácticas en Maquetación WEB</title>
-    <!-- Estilos personalizados -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <!-- Estilos de boostrap -->
+    <title>Buenas Prácticas en Maquetación WEB - Inicio</title>
+    <!-- Estilos de Bootstrap local -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
@@ -17,7 +15,7 @@
             <h1 class="fw-bold text-dark fs-3 m-0">
                 Buenas Prácticas en Maquetación WEB
             </h1>
-            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB WEB - UTPL</p>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB - UTPL</p>
         </div>
     </header>
 
@@ -26,82 +24,106 @@
         <div class="container">
             <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link" href="estructura.html">Estructura y validación</a></li>
                 <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
                 <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
             </ul>
         </div>
     </nav>
-x
+
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="container mb-5">
-
-        <section class="bg-white p-4 rounded shadow">
-            <div class="row g-4 align-items-start">
-                <!-- COLUMNA 1 -->
-                <div class="col-md-4 text-center">
-                    <figure class="rounded overflow-hidden shadow-sm">
-                        <img src="images/html5-black.png" class="img-fluid" alt="html5 logo negro">
+    <main class="container py-4">
+        <section class="page-section shadow-sm">
+            <div class="row g-4 align-items-center">
+                
+                <!-- Columna Izquierda: Logo e Introducción -->
+                <div class="col-lg-5 text-center">
+                    <figure class="mb-4">
+                        <img src="images/html5-black.png" alt="Logo HTML5" class="img-fluid" style="max-height: 250px;">
+                        <figcaption class="text-muted small mt-2">Estándar para la web moderna.</figcaption>
                     </figure>
-                </div>
-                <!-- COLUMNA 2 -->
-                <div class="col-md-8">
-                    <p class="fs-5 text-secondary">
-                        HTML5 es la última versión de HTML que incluye semántica
-                        mejorada y soporte multimedia nativo. Otorga significado semántico
-                        y permite crear sitios web más diversos,
+                    <p class="lead text-secondary">
+                        Aprender a maquetar correctamente es la base para crear sitios accesibles, rápidos y fáciles de mantener.
                     </p>
+                </div>
 
-                    <h3 class="fs-4 fw-semibold text-primary mt-4 mb-3">Ventajas de su uso</h3>
+                <!-- Columna Derecha: Beneficios usando CARDS de Bootstrap -->
+                <div class="col-lg-7">
+                    <h2 class="h4 fw-bold mb-4 border-bottom pb-2 text-primary">¿Por qué usar buenas prácticas?</h2>
+                    
+                    <div class="row g-3">
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-primary-soft text-primary me-2">01</span>
+                                        <h5 class="card-title h6 m-0 fw-bold">Semántica Clara</h5>
+                                    </div>
+                                    <p class="card-text small text-muted">
+                                        Facilita que los navegadores y buscadores entiendan el contenido real de tu sitio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                    <ul class="list-unstyled">
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-primary-soft text-primary me-2">02</span>
+                                        <h5 class="card-title h6 m-0 fw-bold">Accesibilidad</h5>
+                                    </div>
+                                    <p class="card-text small text-muted">
+                                        Permite que personas con discapacidad naveguen eficazmente mediante lectores de pantalla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                        <li class="d-flex align-items-start bg-light p-2 mb-2 rounded">
-                            <span class="text-primary fs-5 me-2">✓</span>
-                            <span>
-                                <strong>Mejor significado semántico.</strong>
-                            </span>
-                        </li>
+                        <!-- Card 3 -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-primary-soft text-primary me-2">03</span>
+                                        <h5 class="card-title h6 m-0 fw-bold">Código Limpio</h5>
+                                    </div>
+                                    <p class="card-text small text-muted">
+                                        Reduce el solapamiento entre HTML, CSS y JS, facilitando el mantenimiento a largo plazo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                        <li class="d-flex align-items-start bg-light p-2 mb-2 rounded">
-                            <span class="text-primary fs-5 me-2">✓</span>
-                            <span>
-                                <strong>Separa el diseño del contenido</strong>
-                            </span>
-                        </li>
-
-                        <li class="d-flex align-items-start bg-light p-2 mb-2 rounded">
-                            <span class="text-primary fs-5 me-2">✓</span>
-                            <span>
-                                <strong>Permite la accesibilidad y el diseño responsivo</strong>
-                            </span>
-                        </li>
-
-                        <li class="d-flex align-items-start bg-light p-2 mb-2 rounded">
-                            <span class="text-primary fs-5 me-2">✓</span>
-                            <span>
-                                <strong>Reduce el solapamiento entre HTML, CSS Javascript</strong>
-                            </span>
-                        </li>
-
-                        <li class="d-flex align-items-start bg-light p-2 mb-2 rounded">
-                            <span class="text-primary fs-5 me-2">✓</span>
-                            <span>
-                                <strong>Soporte a contenido multimedia</strong>
-                            </span>
-                        </li>
-
-                    </ul>
+                        <!-- Card 4 -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-primary-soft text-primary me-2">04</span>
+                                        <h5 class="card-title h6 m-0 fw-bold">Multimedia</h5>
+                                    </div>
+                                    <p class="card-text small text-muted">
+                                        Aprovecha el soporte nativo para audio y video sin necesidad de plugins externos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Fin del grid de cards -->
+                    
                 </div>
             </div>
         </section>
     </main>
 
     <!-- PIE -->
-    <footer class="py-4">
-        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
-            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
+    <footer class="py-4 mt-auto">
+        <div class="container text-secondary text-center small py-4 rounded shadow-sm" style="background-color: #e9ecef;">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL.</p>
+            <p class="mb-0">Desarrollado por: <strong>Milber Champutiz Burbano</strong></p>
             <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
         </div>
     </footer>
