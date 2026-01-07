@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas Prácticas en Maquetación WEB</title>
-    <!-- Estilos personalizados -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <!-- Estilos de boostrap -->
+    <title>Contacto - Buenas Prácticas en Maquetación WEB</title>
+    <!-- Referencia local a Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
 
     <!-- CABECERA -->
     <header class="bg-white shadow-sm py-3 mb-3">
@@ -18,16 +16,16 @@
             <h1 class="fw-bold text-dark fs-3 m-0">
                 Buenas Prácticas en Maquetación WEB
             </h1>
-            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB WEB - UTPL</p>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB - UTPL</p>
         </div>
     </header>
 
     <!-- NAVEGACIÓN -->
-    <nav class="bg-white border-bottom shadow-sm mb-3">
+    <nav class="bg-white border-bottom shadow-sm mb-4">
         <div class="container">
             <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link" href="estructura.html">Estructura y validación</a></li>
                 <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
                 <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
                 <li class="nav-item"><a class="nav-link active" href="contacto.html">Formulario de Contacto</a></li>
@@ -36,55 +34,90 @@
     </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="container mb-5">
+    <main class="container py-2 flex-grow-1">
+        <!-- Layout de columnas usando el sistema de rejilla de Bootstrap -->
+        <div class="row g-4">
+            
+            <!-- Columna Izquierda: Información -->
+            <div class="col-lg-4">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <h2 class="h5 fw-bold mb-4">Información de contacto</h2>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                            📧
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold small">Correo Electrónico</p>
+                            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-decoration-none small text-primary">machamputiz1@utpl.edu.ec</a>
+                        </div>
+                    </div>
 
-        <section class="page-section mx-auto" style="max-width: 650px;">
-            <h2 class="fw-bold text-dark fs-4 mb-4 text-center">
-                Formulario de Contacto
-            </h2>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px;">
+                            📍
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold small">Ubicación</p>
+                            <p class="mb-0 text-muted small">Campus UTPL, Loja - Ecuador</p>
+                        </div>
+                    </div>
 
-            <form action="#" method="POST" class="mt-3">
-
-                <!-- Nombre -->
-                <div class="mb-3">
-                    <label for="nombre" class="form-label fw-semibold">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required
-                           class="form-control shadow-sm">
+                    <div class="alert alert-info border-0 small mt-4 shadow-sm">
+                        <strong>Horario de atención:</strong><br>
+                        Lunes a Viernes: 08:00 - 17:00
+                    </div>
                 </div>
+            </div>
 
-                <!-- Correo -->
-                <div class="mb-3">
-                    <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required
-                           class="form-control shadow-sm">
+            <!-- Columna Derecha: Formulario -->
+            <div class="col-lg-8">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <h2 class="h5 fw-bold mb-4">Envíanos un mensaje</h2>
+                    
+                    <form action="#" method="POST" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <!-- Nombre -->
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label fw-semibold small">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control shadow-sm" placeholder="Tu nombre" required>
+                                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                            </div>
+
+                            <!-- Correo -->
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-semibold small">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="form-control shadow-sm" placeholder="usuario@utpl.edu.ec" required>
+                                <div class="invalid-feedback">Ingresa un correo válido.</div>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label fw-semibold small">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" class="form-control shadow-sm" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                                <div class="invalid-feedback">Escribe tu consulta.</div>
+                            </div>
+
+                            <!-- Botón -->
+                            <div class="col-12 mt-4 text-end">
+                                <button type="submit" class="btn btn-primary fw-bold py-2 px-5 shadow">
+                                    Enviar Mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
-                <!-- Mensaje -->
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="3" required
-                              class="form-control shadow-sm"></textarea>
-                </div>
-
-                <!-- Botón -->
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary fw-semibold py-2">
-                        Enviar Mensaje
-                    </button>
-                </div>
-
-            </form>
-        </section>
-
+        </div>
     </main>
 
     <!-- PIE -->
-    <footer class="py-4">
-        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
-            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
-            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
+    <footer class="py-4 mt-5">
+        <div class="container text-secondary text-center small py-4 rounded bg-secondary bg-opacity-10">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL.</p>
+            <p class="mb-0">Desarrollado por: <strong>Milber Champutiz Burbano</strong></p>
         </div>
     </footer>
-
 </body>
 </html>
