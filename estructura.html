@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas Prácticas en Maquetación WEB</title>
-    <!-- Estilos personalizados -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <!-- Estilos de boostrap -->
+    <title>Estructura y Validación - Buenas Prácticas WEB</title>
+    <!-- Referencia local a Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
 
     <!-- CABECERA -->
     <header class="bg-white shadow-sm py-3 mb-3">
@@ -18,81 +16,122 @@
             <h1 class="fw-bold text-dark fs-3 m-0">
                 Buenas Prácticas en Maquetación WEB
             </h1>
-            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB WEB - UTPL</p>
+            <p class="text-muted small m-0 mt-2 mt-md-0">Tecnologías WEB - UTPL</p>
         </div>
     </header>
 
     <!-- NAVEGACIÓN -->
-    <nav class="bg-white border-bottom shadow-sm mb-3">
+    <nav class="bg-white border-bottom shadow-sm mb-4">
         <div class="container">
             <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link active" href="estructura.html">Estructura y validación</a></li>
                 <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
                 <li class="nav-item"><a class="nav-link" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="container mb-5">
+    <main class="container py-2 flex-grow-1">
+        
+        <!-- Sección de Título e Introducción -->
+        <div class="bg-white p-4 rounded-3 shadow-sm mb-4 border">
+            <h2 class="h4 fw-bold text-primary mb-3">Estructura Semántica y Validación Técnica</h2>
+            <p class="text-muted mb-0">
+                La maquetación moderna se basa en dar significado al contenido. HTML5 introdujo etiquetas que describen la función de cada sección, lo que mejora la accesibilidad y el posicionamiento en buscadores (SEO).
+            </p>
+        </div>
 
-        <section class="page-section my-4">
+        <div class="row g-4">
+            
+            <!-- Columna Izquierda: Teoría y Etiquetas -->
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <h3 class="h5 fw-bold mb-4">Etiquetas Semánticas Clave</h3>
+                    
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0 border-0 mb-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="h6 fw-bold mb-1 text-dark">&lt;header&gt;</h4>
+                            </div>
+                            <p class="mb-1 small text-muted">Contiene elementos introductorios, como el logotipo, nombre del sitio o navegación principal.</p>
+                        </div>
 
-            <h2 class="h4 fw-bold text-secondary mb-3">
-                Esta sección se centra en los elementos fundamentales que aseguran 
-                la correcta interpretación y visualización del documento HTML por parte del navegador.
-            </h2>
+                        <div class="list-group-item px-0 border-0 mb-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="h6 fw-bold mb-1 text-dark">&lt;main&gt;</h4>
+                            </div>
+                            <p class="mb-1 small text-muted">Engloba el contenido único y principal de la página. Solo debe haber uno por documento.</p>
+                        </div>
 
-            <!-- ✅ Tabla corregida: 70% / 30% fijo -->
-            <div class="custom-table-responsive">
-                <table class="table table-bordered align-middle fixed-table">
-                    <thead class="table-primary">
-                        <tr>
-                            <th>Buenas Prácticas</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Declara el DOCTYPE</strong></td>
-                            <td>
-                                Es crucial para indicar al navegador qué versión de HTML se está utilizando,
-                                garantizando la compatibilidad con los estándares modernos.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cierra Tus Etiquetas</strong></td>
-                            <td>
-                                Asegura que la estructura del documento sea correcta, ya que cada etiqueta abierta
-                                debe tener su correspondiente cierre, respetando el orden.
-                                Esto previene errores de renderización.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Especifica la Codificación de Caracteres</strong></td>
-                            <td>
-                                Se debe incluir la meta etiqueta para la codificación, preferiblemente UTF-8,
-                                para garantizar que todos los caracteres, especialmente los especiales (como la "ñ"),
-                                se muestren correctamente.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <div class="list-group-item px-0 border-0 mb-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="h6 fw-bold mb-1 text-dark">&lt;article&gt; y &lt;section&gt;</h4>
+                            </div>
+                            <p class="mb-1 small text-muted">Utilizados para agrupar contenido relacionado de forma independiente o temática.</p>
+                        </div>
+
+                        <div class="list-group-item px-0 border-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="h6 fw-bold mb-1 text-dark">&lt;footer&gt;</h4>
+                            </div>
+                            <p class="mb-1 small text-muted">Información de autoría, contacto, avisos legales o enlaces adicionales de cierre.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </section>
+            <!-- Columna Derecha: Validación y Mejores Prácticas -->
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <h3 class="h5 fw-bold mb-4">Validación del Código</h3>
+                    
+                    <div class="card bg-light border-0 mb-4">
+                        <div class="card-body">
+                            <h4 class="h6 fw-bold text-primary">Estándares del W3C</h4>
+                            <p class="small text-muted mb-0">
+                                Un código válido garantiza que el navegador interprete el sitio correctamente en cualquier dispositivo.
+                            </p>
+                        </div>
+                    </div>
 
+                    <h4 class="h6 fw-bold mb-3">Puntos de control:</h4>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class="text-success me-2">✔</span>
+                            <span><strong>DOCTYPE:</strong> Siempre declarar <code>&lt;!DOCTYPE html&gt;</code> al inicio.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class="text-success me-2">✔</span>
+                            <span><strong>Idioma:</strong> Definir el atributo <code>lang="es"</code> en la etiqueta HTML.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class="text-success me-2">✔</span>
+                            <span><strong>Codificación:</strong> Usar <code>UTF-8</code> para evitar errores de caracteres.</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <span class="text-success me-2">✔</span>
+                            <span><strong>Cierre de Etiquetas:</strong> Mantener una jerarquía limpia y cerrar todas las etiquetas abiertas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- PIE -->
-    <footer class="py-4">
-        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
-            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
-            <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
+    <footer class="py-4 mt-5">
+        <div class="container text-secondary text-center small py-4 rounded bg-secondary bg-opacity-10 border">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL.</p>
+            <p class="mb-0">Desarrollado por: <strong>Milber Champutiz Burbano</strong></p>
         </div>
     </footer>
+
+    <!-- Referencia local a Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
