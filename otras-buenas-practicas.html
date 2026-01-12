@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas Prácticas en Maquetación WEB</title>
-    <!-- Estilos personalizados -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <!-- Estilos de boostrap -->
+    <title>Otras Buenas Prácticas - Proyecto WEB</title>
+    <!-- Referencia local a Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
 
     <!-- CABECERA -->
     <header class="bg-white shadow-sm py-3 mb-3">
@@ -23,75 +21,107 @@
     </header>
 
     <!-- NAVEGACIÓN -->
-    <nav class="bg-white border-bottom shadow-sm mb-3">
+    <nav class="bg-white border-bottom shadow-sm mb-4">
         <div class="container">
             <ul class="nav nav-pills py-2 overflow-auto flex-nowrap">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="estructura.html">Estuctura y validación</a></li>
+                <li class="nav-item"><a class="nav-link" href="estructura.html">Estructura y validación</a></li>
                 <li class="nav-item"><a class="nav-link" href="estilo.html">Estilo y código limpio</a></li>
                 <li class="nav-item"><a class="nav-link active" href="otras-buenas-practicas.html">Otras buenas prácticas</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Formulario de Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="container mb-5">
+    <main class="container py-2 flex-grow-1">
+        
+        <!-- Introducción -->
+        <div class="bg-white p-4 rounded-3 shadow-sm mb-4 border">
+            <h2 class="h4 fw-bold text-primary mb-3">Optimización, Accesibilidad y Rendimiento</h2>
+            <p class="text-muted mb-0">
+                Más allá de la estructura y el estilo, una web profesional debe ser rápida, accesible para todos y fácil de encontrar por los motores de búsqueda.
+            </p>
+        </div>
 
-        <section class="page-section my-4">
-
-            <h2 class="h4 fw-bold text-secondary mb-3">
-                Este grupo de prácticas optimiza el significado del contenido (semántica),
-                lo hace accesible para todos los usuarios y promueve un diseño escalable al separar el contenido del estilo.
-            </h2>
-
-            <!-- ✅ Tabla corregida: 70% / 30% fijo -->
-            <div class="custom-table-responsive">
-                <table class="table table-bordered align-middle fixed-table">
-                    <thead class="table-primary">
-                        <tr>
-                            <th>Buenas Prácticas</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Evita el Uso Excesivo de Etiquetas <strong>div</strong></strong></td>
-                            <td>
-                                Utiliza las etiquetas estructurales de HTML5 como &lt;header&gt;,
-                                &lt;footer&gt;, &lt;article&gt; o &lt;section&gt; para dar un significado
-                                más preciso a las partes de tu documento (código más semántico).
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Familiarízate con las Etiquetas de HTML</strong></td>
-                            <td>
-                                Conocer el repertorio de etiquetas disponibles permite elegir el elemento
-                                más adecuado para cada contenido y evita recurrir al genérico &lt;div&gt; innecesariamente.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Incluye Siempre Atributos ALT</strong></td>
-                            <td>
-                                El atributo alt en las imágenes es vital para la accesibilidad (lectores de pantalla) y
-                                también proporciona contexto adicional para los motores de búsqueda (SEO). Debe ser descriptivo.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row g-4">
+            
+            <!-- Accesibilidad Web -->
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="fs-3 me-2">♿</span>
+                        <h3 class="h5 fw-bold mb-0">Accesibilidad (A11y)</h3>
+                    </div>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item px-0"><strong>Texto alternativo:</strong> Uso de <code>alt</code> descriptivo en todas las imágenes.</li>
+                        <li class="list-group-item px-0"><strong>Contraste:</strong> Asegurar legibilidad entre el color de fuente y el fondo.</li>
+                        <li class="list-group-item px-0"><strong>Navegación por teclado:</strong> Permitir que usuarios naveguen sin usar el ratón.</li>
+                        <li class="list-group-item px-0"><strong>Etiquetas ARIA:</strong> Mejorar la experiencia para lectores de pantalla.</li>
+                    </ul>
+                </div>
             </div>
 
-        </section>
+            <!-- SEO y Rendimiento -->
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100 border">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="fs-3 me-2">🚀</span>
+                        <h3 class="h5 fw-bold mb-0">Rendimiento y SEO</h3>
+                    </div>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item px-0"><strong>Carga de Imágenes:</strong> Implementar <code>loading="lazy"</code> para optimizar velocidad.</li>
+                        <li class="list-group-item px-0"><strong>Metadatos:</strong> Uso correcto de etiquetas <code>&lt;meta&gt;</code> (description, keywords).</li>
+                        <li class="list-group-item px-0"><strong>Jerarquía Hn:</strong> Mantener una estructura lógica de títulos para buscadores.</li>
+                        <li class="list-group-item px-0"><strong>Favicon:</strong> Personalizar el icono de la pestaña para identidad visual.</li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- Resumen en Tabla -->
+            <div class="col-12">
+                <div class="bg-white p-4 rounded-3 shadow-sm border">
+                    <h3 class="h5 fw-bold mb-4">Resumen de Herramientas de Auditoría</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Herramienta</th>
+                                    <th>Enfoque</th>
+                                    <th>Enlace</th>
+                                </tr>
+                            </thead>
+                            <tbody class="small">
+                                <tr>
+                                    <td class="fw-bold">Google Lighthouse</td>
+                                    <td>Rendimiento, SEO y Accesibilidad.</td>
+                                    <td>Integrado en Chrome DevTools</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Wave Tool</td>
+                                    <td>Evaluación visual de accesibilidad web.</td>
+                                    <td><a href="https://wave.webaim.org/" target="_blank" class="text-decoration-none">Visitar sitio</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">GTmetrix</td>
+                                    <td>Análisis profundo de tiempos de carga.</td>
+                                    <td><a href="https://gtmetrix.com/" target="_blank" class="text-decoration-none">Visitar sitio</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- PIE -->
-    <footer class="py-4">
-        <div class="container text-secondary text-center small py-4 rounded" style="background-color: #e0e0e0;">
-            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL - por Milber Champutiz Burbano.</p>
+    <footer class="py-4 mt-auto">
+        <div class="container text-secondary text-center small py-4 rounded shadow-sm" style="background-color: #e9ecef;">
+            <p class="mb-1">&copy; 2025 Proyecto Académico HTML5 Estático. Fundamento WEB - UTPL.</p>
+            <p class="mb-0">Desarrollado por: <strong>Milber Champutiz Burbano</strong></p>
             <a href="mailto:machamputiz1@utpl.edu.ec" class="text-primary text-decoration-none">machamputiz1@utpl.edu.ec</a>
         </div>
     </footer>
-
 </body>
 </html>
